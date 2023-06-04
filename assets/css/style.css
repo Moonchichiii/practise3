@@ -1,5 +1,5 @@
 /* global styles */
-
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 * { 
     box-sizing: border-box;
     margin: 0;
@@ -7,26 +7,171 @@
 }
 
 body {
-
+    font-family: 'Lato', sans-serif;
+    background-color: var(--body-bkg);
+    scroll-behavior: smooth;
+    margin-top: 2%;
 }
 
 /* colors */ 
 
+:root {
 
+    --body-bkg:#172D13;
+    --header-bkg:#6E6E6E;
+    --main-bkg:#FFFFFF;
+    --footer-bkg:#494949;
+    --headings:#D76F30;
+
+    --button-color-dark-bkg:#6BB77B;
+    --button-hover-color-dark-bkg:#FDD935;
+
+    --link-hover-color-light-bkg:#FB8122;
+
+
+    --larger-text-color:#A0AECD; 
+    --main-headings-color:#696868;
+    --main-text-color:#3a3a3a;
+    --text-color:#f2f4f7; 
+}
 
 /* typograph text elements */ 
 
+h1 {
+    color: var(--text-color);
+    font-size: 4.5rem;
+}
 
 
-/* main layout */ 
+/* basic layout */ 
+
+header {
+    background-color: var(--header-bkg);
+    width: 65%;
+    height: 40dvh;
+    margin: auto;
+    border-radius: 10px;
+    padding: 2px;
+    background-image: url("/assets/images/pexels-jonathan-petersson-401080.jpg");
+    background-position: center center;
+    background-size:cover;
+    background-repeat: no-repeat;
+}
+
+main {
+    background-color:var(--main-bkg);
+    width: 65%;
+    height:40vh;
+    margin: auto;
+    border-radius: 10px;
+    padding: 2px;
+}
+
+
+footer {
+    background-color: var(--footer-bkg);
+    width: 65%;
+    height: 20svh;
+    margin: 1% auto;
+    border-radius: 10px;
+    padding: 2px;
+    color: var(--text-color);
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
 
 
 
 
 
-/* */ 
-/**/ 
-/**/ 
-/**/ 
+
+/* hero header */ 
+
+.hero-header {
+    margin-top: 10%;
+}
+
+.searchbar {
+    display: flex;
+    justify-content: right;    
+    margin:4% 1% 1% 1%;
+}
 
 
+/* main page layout */ 
+
+/* navigation */ 
+
+main > nav,li {
+    display: flex;
+    justify-content:center;
+    margin: 1% 0 2% 0;
+}
+main > nav,li,a {
+    padding-left: 4px;
+    list-style: none;
+}
+
+li,
+a:nth-child(-n+5) {
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: inline-block;
+    align-items: center;
+    color: var(--main-text-color);
+}
+
+nav,li,a:hover {
+    color: var(--link-hover-color-light-bkg);
+}
+
+
+
+/* main content */ 
+
+.main-mini-content-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 1%;
+}
+
+.lodging,
+.hunting,
+.fishing { 
+    max-width: 20%;
+    max-height: 45%;
+    overflow: auto;
+    background-color: var(--footer-bkg);
+    color: var(--link-hover-color-light-bkg);
+    
+}
+
+
+
+/* footer layout */ 
+
+footer div {
+    max-width: 25%;
+}
+.social {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    /*
+    justify-content: space-between; */
+}
+
+.link-icons {
+    display: flex;
+    justify-content: right;
+    margin:20px;
+}
+
+.reservation-icons {
+    display: flex;
+    justify-content: right;
+    margin:20px;
+}
