@@ -170,29 +170,35 @@ nav,li,a:hover {
 
 /* footer layout */ 
 
-footer div {
-    max-width: 25%;
+.mindfulness {
+    max-width: 15%;
+    max-height: 35%;
+
 }
+
+.mindfulness p {
+    text-align: left;
+}
+
+
+
+
+
 .social {
     width: auto;
     height: auto;
     display: flex;
     flex-direction: column;
+    
     /*
     justify-content: space-between; */
 }
-
-.link-icons {
-    display: flex;
-    justify-content: right;
-    margin:20px;
+i {
+    flex-direction: row;
+    margin-top: 2%;
 }
 
-.reservation-icons {
-    display: flex;
-    justify-content: right;
-    margin:20px;
-}
+
 
 
 @media screen and (max-width:700px) {
@@ -242,14 +248,14 @@ footer div {
     footer {
         background-color: var(--footer-bkg);
         width: 95%;
-        height: 20svh;
+        height: 30svh;
         margin: 2% auto;
         border-radius: 10px;
         padding: 2px;
         color: var(--text-color);
         margin-bottom: 2%;
         display: flex;
-        justify-content: space-between; 
+        justify-content: center; 
         align-items: center;
     }
     
@@ -325,28 +331,20 @@ footer div {
     
     /* footer layout */ 
     
-    footer div {
-        max-width: 25%;
-    }
-    .social {
-        width: auto;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        /*
-        justify-content: space-between; */
-    }
+.copyright {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     
-    .link-icons {
-        display: flex;
-        justify-content: right;
-        margin:20px;
-    }
-    
-    .reservation-icons {
-        display: flex;
-        justify-content: right;
-        margin:20px;
-    }
     
 }
+   .social {
+        width: auto;
+        height: auto;
+        display: inline-block;
+        align-items: center;
+   }
+        
+}
+    
+ 
