@@ -6,12 +6,6 @@
     padding: 0;
 }
 
-body {
-    font-family: 'Lato', sans-serif;
-    background-color: var(--body-bkg);
-    scroll-behavior: smooth;
-    margin-top: 2%;
-}
 
 /* colors */ 
 
@@ -39,6 +33,14 @@ body {
     --text-color:#f2f4f7; 
 }
 
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--left-col-bkg-color);
+    scroll-behavior: smooth;
+    margin-top: 2%;
+}
+
+
 /* typograph text elements */ 
 
 h1 {
@@ -56,17 +58,14 @@ nav ul {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-    padding: 0 6px;
+    
 }
 
-nav li {
-    padding: 0 10px;
-  
-} 
-
-header nav a {
+ nav a  {
+    font-size: 1.21rem;
     text-decoration: none;
 }
+
 
 /* main layout */
 
@@ -122,3 +121,25 @@ main {
     visibility: visible;
 }
 
+
+
+/* @ media */
+
+@media screen and (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+
+    .col-left {
+        background-image: url("/assets/images/MVIMG_20180609_141755.webp");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-blend-mode: multiply;
+    }
+
+    .col-right {
+        background-image: none;
+        grid-column: 1;
+    }
+}
