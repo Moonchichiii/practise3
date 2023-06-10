@@ -17,9 +17,13 @@ body {
 
 :root {
 
-    --body-bkg:#172D13;
-    --header-bkg:#6E6E6E;
-    --main-bkg:#FFFFFF;
+    --body-bkg-color:#18453B;
+    --right-col-bkg-color: rgba(218, 221, 152, 0.5);
+    --left-col-bkg-color: rgba(73, 121, 107, 0.5);
+    --right-col-bkg-color:#DADD98;
+    --left-col-bkg-color:#49796B;
+
+
     --footer-bkg:#494949;
     --headings:#D76F30;
 
@@ -44,304 +48,77 @@ h1 {
 }
 
 
-/* basic layout */ 
-.low-opacity-bkg {
-    
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("/assets/images/pexels-jonathan-petersson-401080.jpg");
-    background-position: center center;
-    background-size:cover;
-    background-repeat: no-repeat;
-    opacity: 0.6;
-}
-
-header {
-    position: relative;
-    background-color: var(--header-bkg);
-    width: 65%;
-    height: 40vh; 
-    margin: auto;
-    border-radius: 10px;
-    padding: 2px;
-    overflow: hidden; 
-}
 
 
-.hero-header, .searchbar {
-    position: relative;
-    z-index: 1;
+
+/* header navigation */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6px;
 }
+
+nav li {
+    padding: 0 10px;
+  
+} 
+
+header nav a {
+    text-decoration: none;
+}
+
+/* main layout */
 
 
 main {
-    background-color:var(--main-bkg);
-    width: 65%;
-    height:40vh;
-    margin: auto;
-    border-radius: 10px;
-    padding: 2px;
-}
-
-
-footer {
-    background-color: var(--footer-bkg);
-    width: 65%;
-    height: 20svh;
-    margin: 1% auto;
-    border-radius: 10px;
-    padding: 2px;
-    color: var(--text-color);
-    margin-bottom: 2%;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-}
-
-
-
-
-
-
-/* hero header */ 
-
-.hero-header {
-    margin: 10% 0 0 2%;
-}
-
-.searchbar {
-    display: flex;
-    justify-content: right;    
-    margin:4% 1% 1% 1%;
-}
-
-
-/* main page layout */ 
-
-/* navigation */ 
-
-main > nav,li {
-    display: flex;
-    justify-content:center;
-    margin: 1% 0 2% 0;
-}
-main > nav,li,a {
-    padding-left: 4px;
-    list-style: none;
-}
-
-li,
-a:nth-child(-n+5) {
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: inline-block;
-    align-items: center;
-    color: var(--main-text-color);
-}
-
-nav,li,a:hover {
-    color: var(--link-hover-color-light-bkg);
-}
-
-
-
-/* main content */ 
-.main-mini-content-wrapper {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1%;
-}
-
-.lodging,
-.hunting,
-.fishing { 
-    overflow: auto;
-    background-color: var(--footer-bkg);
-    color: var(--link-hover-color-light-bkg);
+    grid-template-columns: 50% 1% 30%;
+    grid-gap: 1%;
+    align-items: stretch;
+    margin: 0;
+    height: 100vh;
 }
 
 
-
-/* footer layout */ 
-
-.mindfulness {
-    max-width: 15%;
-    max-height: 35%;
-
-}
-
-.mindfulness p {
-    text-align: left;
-}
-
-
-
-
-
-.social {
-    width: auto;
-    height: auto;
+  .col-left {
+    grid-column: 1;
+    background-color: var(--left-col-bkg-color);
+  }
+  
+  .col-right {
+    grid-column: 3;
+    background-color: var(--right-col-bkg-color);
+    background-image: url("/assets/images/MVIMG_20180609_141755.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+  }
+  
+  .circle-pop-up-menu {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--body-bkg-color);
+    transition: width 0.2s ease-in-out;
     display: flex;
-    flex-direction: column;
-    
-    /*
-    justify-content: space-between; */
-}
-i {
-    flex-direction: row;
-    margin-top: 2%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
 }
 
-
-
-
-@media screen and (max-width:700px) {
-    .low-opacity-bkg {
-    
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url("/assets/images/pexels-jonathan-petersson-401080.jpg");
-        background-position: center center;
-        background-size:cover;
-        background-repeat: no-repeat;
-        opacity: 0.6;
-    }
-    
-    header {
-        position: relative;
-        background-color: var(--header-bkg);
-        width: 95%;
-        height: 40vh; 
-        margin: auto;
-        border-radius: 10px;
-        padding: 2px;
-        overflow: hidden; 
-        text-align: center;
-    }
-    
-    
-    .hero-header, .searchbar {
-        position: relative;
-        z-index: 1;
-    }
-    
-    
-    main {
-        background-color:var(--main-bkg);
-        width: 95%;
-        height:80vh;
-        margin: auto;
-        border-radius: 10px;
-        padding: 2px;
-    }
-    
-    
-    footer {
-        background-color: var(--footer-bkg);
-        width: 95%;
-        height: 30svh;
-        margin: 2% auto;
-        border-radius: 10px;
-        padding: 2px;
-        color: var(--text-color);
-        margin-bottom: 2%;
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-    }
-    
-    
-    
-    
-    
-    
-    /* hero header */ 
-    
-    .hero-header {
-        margin-top: 10%;
-    }
-    
-    .searchbar {
-        display: flex;
-        justify-content: right;    
-        margin:4% 1% 1% 1%;
-    }
-    
-    
-    /* main page layout */ 
-    
-    /* navigation */ 
-    
-    main > nav,li {
-        display: flex;
-        justify-content:center;
-        margin: 1% 0 2% 0;
-    }
-    main > nav,li,a {
-        padding-left: 4px;
-        list-style: none;
-    }
-    
-    li,
-    a:nth-child(-n+5) {
-        text-decoration: none;
-        font-size: 1.1rem;
-        display: inline-block;
-        align-items: center;
-        color: var(--main-text-color);
-    }
-    
-    nav,li,a:hover {
-        color: var(--link-hover-color-light-bkg);
-    }
-    
-    
-    
-    /* main content */ 
-    
-    
-.main-mini-content-wrapper {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 3fr);
+.circle-pop-up-menu i {
+    visibility: hidden;
+    transition: visibility 0.2s ease-in-out;
 }
-    .lodging,
-    .hunting,
-    .fishing { 
-        display: inline-block;
-        margin: auto;
-        max-width: 82%;
-        max-height: 100%;
-        overflow: auto;
-        background-color: var(--footer-bkg);
-        color: var(--link-hover-color-light-bkg);
-        
-    }
-    
-    
-    
-    /* footer layout */ 
-    
-.copyright {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    
-    
+
+.circle-pop-up-menu:hover {
+    width: 100px;
 }
-   .social {
-        width: auto;
-        height: auto;
-        display: inline-block;
-        align-items: center;
-   }
-        
+
+.circle-pop-up-menu:hover i {
+    visibility: visible;
 }
-    
- 
+
