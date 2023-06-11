@@ -22,7 +22,7 @@
 
 body {
     font-family: 'Lato', sans-serif;
-    background-color: var(--left-col-bkg-color);
+    background-color: var(--body-bkg-color);
     scroll-behavior: smooth;
     margin: 1%;
     display: flex;
@@ -88,7 +88,7 @@ footer {
     display: grid;
     margin: 1%;
     width: 80vw;
-    background-color: var(--footer-bkg);
+    background-color: var(--body-bkg-color);
 }
 
 .circle-pop-up-menu {
@@ -158,7 +158,9 @@ footer {
         background-blend-mode: multiply;
        
     }
-
+    .col-left h1 {
+        font-size:3.5rem;
+    }
     .col-right {
         
         background-image: none;
@@ -167,9 +169,11 @@ footer {
 
     
 footer {
-    display: grid;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
     margin: 1%;
     width: 90vw;
-    background-color: var(--footer-bkg);
+    background-color: var(--body-bkg-color);
 }
 }
