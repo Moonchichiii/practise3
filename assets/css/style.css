@@ -40,7 +40,7 @@ nav ul {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
-    margin: 2% 0 0 2%;
+    margin: 1% 1% 2% 1%;
 }
 
 nav a  {
@@ -59,9 +59,9 @@ main {
     display: grid;
     grid-template-columns: 3fr 2fr;
     grid-gap: 1%;
-    align-items: auto;
+   
     margin: 0;
-    height: 80vh;
+    height: 70vh;
     width: 80vw;
 }
 
@@ -118,11 +118,36 @@ footer {
     visibility: visible;
 }
 
+
+.mobile-heading {
+    display: none;
+}
+
+.desktop-heading {
+    display: block;
+}
+
+
 @media screen and (max-width: 768px) {
+    
+    
+    .mobile-heading {
+        display: block;
+    }
+
+    .desktop-heading {
+        display: none;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+    
     main {
+        margin: auto;
         grid-template-columns: 1fr;
-        grid-gap: 2rem;
-        width: 90vw;
+        grid-gap: 1rem;
+        width: 100vw;
     }
 
     .col-left {
@@ -137,6 +162,14 @@ footer {
     .col-right {
         
         background-image: none;
-        grid-column: 1;
+        /*grid-column: 1;*/
     }
+
+    
+footer {
+    display: grid;
+    margin: 1%;
+    width: 90vw;
+    background-color: var(--footer-bkg);
+}
 }
